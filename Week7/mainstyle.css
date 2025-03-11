@@ -1,0 +1,16 @@
+span{
+    background-color: burlywood;
+}
+
+    .redtext{ 
+        color: red;
+    }
+#linkmodify{
+    text-decoration: none;
+    color: darkslateblue;
+}
+body{
+    background-color: palegoldenrod;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+}
