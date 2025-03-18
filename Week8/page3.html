@@ -1,0 +1,87 @@
+<html>
+    <title>page 3</title>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script>
+        function getData() {
+            var movie = document.getElementById("Movie").value;
+            var actor = document.getElementById("Actor").value;
+            var actress = document.getElementById("Actress").value;
+            var genre = document.getElementById("Genre").value;
+            
+            console.log("Movie:", movie, "Actor:", actor, "Actress:", actress, "Genre:", genre);
+        }
+
+        function movieValidation() {
+            var movie = document.getElementById("Movie");
+            if (movie.value == "") {
+                movie.style.border = '5px solid';
+                movie.style.borderColor = 'red';
+                return false;
+            }
+            movie.style.border = '';
+            return true;
+        }
+
+        function actorValidation() {
+            var actor = document.getElementById("Actor");
+            if (actor.value == "") {
+                actor.style.border = '5px solid';
+                actor.style.borderColor = 'red';
+                return false;
+            }
+            actor.style.border = '';
+            return true;
+        }
+
+        function actressValidation() {
+            var actress = document.getElementById("Actress");
+            if (actress.value == "") {
+                actress.style.border = '5px solid';
+                actress.style.borderColor = 'red';
+                return false;
+            }
+            actress.style.border = '';
+            return true;
+        }
+
+        function genreValidation() {
+            var genre = document.getElementById("Genre");
+            if (genre.value == "") {
+                genre.style.border = '5px solid';
+                genre.style.borderColor = 'red';
+                return false;
+            }
+            genre.style.border = '';
+            return true;
+        }
+
+        window.onload = function() {
+            var submitButton = document.getElementById("btnSubmit");
+            submitButton.addEventListener('click', function(e) {
+                e.preventDefault(); 
+                var isMovieValid = movieValidation();
+                var isActorValid = actorValidation();
+                var isActressValid = actressValidation();
+                var isGenreValid = genreValidation();
+
+                if (isMovieValid && isActorValid && isActressValid && isGenreValid) {
+                    getData();
+                    document.querySelector('form').submit();
+                }
+            });
+        }
+        </script>
+    </head>
+    <body style="background-color: burlywood;">
+        <h3>What's your favorite movie, actor, actress, and genre?</h3>
+        <br>
+        <form>
+            Movie: <input type="text" id="Movie"> <br>
+            Actor: <input type="text" id="Actor"> <br>
+            Actress: <input type="text" id="Actress"> <br>
+            Genre: <input type="text" id="Genre"> <br>
+            <button id="btnSubmit" class="btn btn-primary">Submit</button>
+        </form>
+    </body>
+</html>

@@ -1,46 +1,18 @@
 <html>
-    <title>First Javascript Page!</title>
+    <title>my website</title>
     <head>
-        <script>
-        document.write("Hi there");
-    </script>
-</head>
-<body>
-    This HTML page has JavaScript on it. What do you see?
-</body>
-</html>
-<html>
-    <title>Forms</title>
-    <head>
-        <script>
-            function getData()
-            {
-                var name = document.getElementById("txtName").value;
-                var phone = document.getElementById("txtPhone").value;
-                var email = document.getElementById("txtEmail").value;
-
-                document.getElementById("finalResult").innerHTML = "name: " + name + " phone: " + phone + " email: " + email;
-            }
-        </script>
+        <style>
+            body{
+                background-color: burlywood;
+                }
+                h2{
+                    color: red;
+                }
+        </style>
     </head>
     <body>
-        <table>
-            <tr>
-                <td>Name</td>
-                <td><input type="text" id="txtName"></td>
-            </tr>
-            <tr>
-                <td>Phone Number</td>
-                <td><input type="text" id="txtPhone"></td>
-            </tr>
-            <tr>
-                <td>Email</td>
-                <td><input type="text" id="txtEmail"></td>
-              </tr>
-            <tr>
-                <td colspan="2"><button id="btnSubmit" onClick="getData();">Submit</button></td>
-            </tr>
-        </table>
-        <div id="finalResult"></div>
+        Welcome to my movie blog! Click the link to learn about what movies I like, then tell me what your favorite movie is!
+        <img src="filmreel.png" height="350" width="500"> <br>
+        <a href="page2.html">Page2</a>
     </body>
- </html>
+</html>

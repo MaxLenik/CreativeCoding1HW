@@ -1,0 +1,18 @@
+span{
+    background-color:burlywood;
+}
+
+
+
+.redText{
+    color: red;
+}
+#linkModify{
+    text-decoration: none;
+    color:darkslateblue;
+}
+body{
+    background-color: burlywood;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
