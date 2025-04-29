@@ -22,7 +22,7 @@ function draw() {
 fft.analyze()
   amp = fft.getEnergy(20,200)
 
-  let wave = song.isPlaying() ? fft.waveform() : lastWaveform;
+  let wave = fft.waveform();
   if (song.isPlaying()) {
     lastWaveform = wave;
   }
@@ -35,7 +35,7 @@ fft.analyze()
       particles.splice(i, 1);
     }
   }
-  
+  // circle
   for (let t = -1; t <= 1; t += 2) {
     beginShape();
     for (let i = 0; i <= 180; i += 0.5) {
@@ -50,14 +50,14 @@ fft.analyze()
     }
     endShape();
   }
-
+  // white stripes
   for (let t = -1; t <= 1; t += 2) {
     stroke(255);
     noFill();
     beginShape();
     for (let a = 0; a <= 180; a += 1) {
       let index = floor(map(a, 0, 180, 0, wave.length - 1));
-      let r = map(wave[index], -1, 1, 150, 350);
+      let r = map(wave[index], -1, 1, 140, 320);
       let y = r * cos(a);
       
       let xBase = 100 * t;
